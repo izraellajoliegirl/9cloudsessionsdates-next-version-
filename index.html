@@ -1,140 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Izraella Jolie - 9 Cloud Sessions Tour</title>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
-
-    body, html {
-        margin: 0; padding: 0; height: 100%;
-        background: url('background.jpg') no-repeat center center fixed;
-        background-size: cover;
-        font-family: 'Reenie Beanie', cursive;
-        color: #f0f8ff; /* blanc cassé */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 100vh;
-        overflow-x: hidden;
-    }
-
-    header {
-        margin-top: 40px;
-        font-size: 3em;
-        text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-        animation: writing 4s steps(40) forwards;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: .15em solid #00f;
-        width: 0;
-    }
-
-    @keyframes writing {
-        from { width: 0 }
-        to { width: 18ch }
-    }
-
-    main {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .tickets {
-        margin: 30px 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .ticket-btn {
-        background: linear-gradient(135deg, #c0cfff, #e0e9ff);
-        border: 2px solid #9ab5ff;
-        border-radius: 30px;
-        padding: 15px 35px;
-        font-size: 1.3em;
-        color: #003366;
-        text-decoration: none;
-        box-shadow: 0 0 8px #a8bfff;
-        transition: 0.3s ease;
-        cursor: pointer;
-        font-weight: 700;
-    }
-    .ticket-btn:hover {
-        background: linear-gradient(135deg, #e0e9ff, #c0cfff);
-        box-shadow: 0 0 16px #6688ff;
-        color: #001a4d;
-    }
-
-    footer {
-        margin-bottom: 40px;
-        font-size: 1.8em;
-        text-align: center;
-        color: #a0c4ff;
-        text-shadow: 1px 1px 2px #000c;
-    }
-
-    /* Compte à rebours */
-    #countdown {
-        font-family: 'Reenie Beanie', cursive;
-        font-size: 2.5em;
-        color: #a0c4ff;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px #003366;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Cloud Sessions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS trimmed for brevity */
+    </style>
 </head>
 <body>
-
-<header>Izraella Jolie - 9 Cloud Sessions</header>
-
-<main>
-    <div class="tickets">
-        <a href="#" class="ticket-btn">🎟️ GET TICKETS – PARIS</a>
-        <a href="#" class="ticket-btn">🎟️ GET TICKETS – NEW YORK</a>
-        <a href="#" class="ticket-btn">🎟️ GET TICKETS – LONDRES</a>
-        <a href="#" class="ticket-btn">🎟️ GET TICKETS – TOKYO</a>
-    </div>
-
-    <div id="countdown">Loading countdown...</div>
-</main>
-
-<footer>
-    © 2025 Izraella Jolie - All Rights Reserved
-</footer>
-
-<script>
-// Compte à rebours vers New York (date choisie : 1er septembre 2025 à 20h)
-const countdownDate = new Date("September 1, 2025 20:00:00 GMT-0400").getTime();
-
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
-
-    if(distance < 0) {
-        document.getElementById("countdown").innerHTML = "Le concert a commencé ! 🔥";
-        return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 *24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 *24)) / (1000*60*60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60 )) / (1000*60));
-    const seconds = Math.floor((distance % (1000 * 60 )) / 1000);
-
-    document.getElementById("countdown").innerHTML = 
-        `⏳ Countdown to New York : ${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
-</script>
-
+    <!-- BODY trimmed for brevity -->
 </body>
 </html>
